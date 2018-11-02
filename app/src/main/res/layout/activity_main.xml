@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+>
+
+    <data>
+        <variable
+                name="words"
+                type="com.elhami.mvvmsample.ui.main.MainActivityVM"/>
+    </data>
+    <RelativeLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+    >
+        <TextView
+                android:id="@+id/eng_word_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_25"
+                android:text="@={words.eng_word}"
+                android:layout_marginLeft="@dimen/size_8"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+        />
+
+        <TextView
+                android:id="@+id/spn_word_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@={words.spn_word}"
+                android:textSize="@dimen/txt_size_20"
+                android:layout_marginRight="@dimen/size_8"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+        />
+    </RelativeLayout>
+</layout>
